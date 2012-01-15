@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:component-scan base-package="com.khmelyuk.dib" annotation-config="true"/>
+
+    <bean name="apiMessages" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>ApiMessages</value>
+            </list>
+        </property>
+    </bean>
+
+    <util:list id="apiRequestHandlersList" list-class="java.util.ArrayList"
+               value-type="com.khmelyuk.dib.handler.ApiRequestHandler">
+
+        <bean class="com.khmelyuk.dib.handler.DetectActionHandler">
+            <property name="actionHolder">
+                <bean class="com.khmelyuk.dib.ApiActionHolder"/>
+            </property>
+        </bean>
+        <ref bean="securedHandler"/>
+        <bean class="com.khmelyuk.dib.handler.ModelBuildHandler"/>
+        <bean class="com.khmelyuk.dib.handler.ValidateHandler"/>
+        <bean class="com.khmelyuk.dib.handler.ExecuteHandler"/>
+    </util:list>
+
+    <bean id="fileItemFactory" class="org.apache.commons.fileupload.disk.DiskFileItemFactory"/>
+
+    <bean id="fileUpload" class="org.apache.commons.fileupload.servlet.ServletFileUpload">
+        <property name="fileItemFactory" ref="fileItemFactory"/>
+        <property name="fileSizeMax" value="${dib.fileMaxSize}"/>
+        <property name="sizeMax" value="${dib.fileMaxSize}"/>
+    </bean>
+
+</beans>
