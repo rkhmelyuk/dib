@@ -5,18 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.khmelyuk.dib</groupId>
-    <artifactId>dib-core</artifactId>
+    <artifactId>dib-client</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Dib Core</name>
-    <description>Dib is a Server HTTP API Framework</description>
-
-    <scm>
-        <connection>scm:git:git://github.com/rkhmelyuk/core.git</connection>
-        <developerConnection>scm:git:git@github.com:rkhmelyuk/core.git</developerConnection>
-        <url>http://github.com/rkhmelyuk/core/tree/master</url>
-    </scm>
+    <name>Dib Client</name>
+    <description>A client for a Dib API</description>
 
     <properties>
         <spring.version>3.0.6.RELEASE</spring.version>
@@ -34,7 +28,7 @@
         </repository>
         <repository>
             <id>repository.jboss.org</id>
-            <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+            <url>https://http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
         </repository>
         <repository>
             <id>maven.khmelyuk.com</id>
@@ -197,7 +191,7 @@
     </dependencies>
 
     <build>
-        <finalName>dib-core</finalName>
+        <finalName>dib-client</finalName>
 
         <resources>
             <resource>
