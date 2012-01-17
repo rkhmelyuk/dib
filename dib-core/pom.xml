@@ -237,11 +237,6 @@
             <id>rkhmelyuk</id>
             <name>Ruslan Khmelyuk</name>
             <email>ruslan@khmelyuk.com</email>
-            <organization/>
-            <timezone>+3</timezone>
-            <roles>
-                <role>Developer</role>
-            </roles>
         </developer>
 
     </developers>
