@@ -5,17 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.khmelyuk.dib</groupId>
-    <artifactId>dib-core</artifactId>
+    <artifactId>dib-server</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Dib Core</name>
+    <name>Dib Server</name>
     <description>Dib is a Server HTTP API Framework</description>
 
     <scm>
-        <connection>scm:git:git://github.com/rkhmelyuk/core.git</connection>
-        <developerConnection>scm:git:git@github.com:rkhmelyuk/core.git</developerConnection>
-        <url>http://github.com/rkhmelyuk/core/tree/master</url>
+        <connection>scm:git:git://github.com/rkhmelyuk/dib.git</connection>
+        <developerConnection>scm:git:git@github.com:rkhmelyuk/dib.git</developerConnection>
+        <url>http://github.com/rkhmelyuk/dib/tree/master</url>
     </scm>
 
     <properties>
@@ -197,7 +197,7 @@
     </dependencies>
 
     <build>
-        <finalName>dib-core</finalName>
+        <finalName>dib-server</finalName>
 
         <resources>
             <resource>

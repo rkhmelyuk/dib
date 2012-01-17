@@ -12,6 +12,12 @@
     <name>Dib Client</name>
     <description>A client for a Dib API</description>
 
+    <scm>
+        <connection>scm:git:git://github.com/rkhmelyuk/dib.git</connection>
+        <developerConnection>scm:git:git@github.com:rkhmelyuk/dib.git</developerConnection>
+        <url>http://github.com/rkhmelyuk/dib/tree/master</url>
+    </scm>
+
     <properties>
         <spring.version>3.0.6.RELEASE</spring.version>
         <java.version>1.6</java.version>
